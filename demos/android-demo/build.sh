@@ -1,5 +1,5 @@
-android update project --path .
-ndk-build -v 
+~/Downloads/tools/android update project --path . --target android-27
+ndk-build -v
 if [ $? -ne 0 ]; then
     exit
 fi

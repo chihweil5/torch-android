@@ -3,7 +3,8 @@
 -- Copyright (C) 2013 Soumith Chintala
 
 require 'torch'
-require 'cutorch'
+print("Torch loaded")
+--[[require 'cutorch'
 require 'cunn'
 -- require 'cudnn'
 require 'nnx'
@@ -36,3 +37,4 @@ cunn.test('SpatialConvolutionLocal_forward_single')
 
 --- print('Running VolumetricConvolution_forward_batch:')
 --- nn.testcuda{'VolumetricConvolution_forward_batch'}
+]]

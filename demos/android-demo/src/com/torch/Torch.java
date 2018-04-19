@@ -20,11 +20,11 @@ public class Torch
 	assetManager = myContext.getAssets();
         info = myContext.getApplicationInfo();
         System.loadLibrary("gnustl_shared");
-        System.loadLibrary("cublas");
-        System.loadLibrary("THC");
-        System.loadLibrary("cutorch");
+        // System.loadLibrary("cublas");
+        //System.loadLibrary("THC");
+        // System.loadLibrary("cutorch");
         System.loadLibrary("THNN");
-        System.loadLibrary("THCUNN");
+        // System.loadLibrary("THCUNN");
         System.loadLibrary("torchandroid");
 	Log.d("Torch","Torch() called\n");
 	return this;
@@ -40,10 +40,10 @@ public class Torch
 		response += evalAssetFile(lua[i]);
 	    }
 	    return response;
-	}	
+	}
 	Torch mTorch;
     };
-	
+
 	// Todo: extract native method to evaluate Lua String
     private String evalAssetFile(String lua) {
 	Log.d("Torch", String.format("Torch.evalAssetFile(%s)\n", lua));
